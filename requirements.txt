@@ -1,0 +1,17 @@
+streamlit
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+plotly
+scipy
+imbalanced-learn
+statsmodels
+openpyxl
+groq
+python-dotenv
+langgraph
+langchain-groq
+langchain-core
+tabulate
