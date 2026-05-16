@@ -28,7 +28,7 @@ An advanced, research-grade autonomous data science platform built with Streamli
 
 ---
 
-## 🦁 Model Zoo
+## 📦 Model Vault
 
 The platform supports over **20+ model configurations** across 14 unique base algorithms.
 
