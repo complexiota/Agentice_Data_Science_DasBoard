@@ -647,11 +647,11 @@ IMPORTANT INSTRUCTIONS:
                     messages=[
                         {"role": "system", "content": "You are a helpful, expert data science assistant. Always write working Python code using the provided df variable."},
                         {"role": "user", "content": groq_prompt},
-                    ],
-                    model=os.getenv("GROQ_MODEL", "llama3-70b-8192"),
-                    temperature=0.1,
-                    max_tokens=2048,
-                )
+                        ],
+                        model=os.getenv("GROQ_MODEL", "llama3-70b-8192"),
+                        temperature=0.1,
+                        max_tokens=2048,
+                    )
                 reply = response.choices[0].message.content
 
                 # Extract and execute code — capture ALL figures generated
@@ -665,10 +665,14 @@ IMPORTANT INSTRUCTIONS:
                     with st.spinner("⚙️ Executing code..."):
                         exec_globals = {
                             "df": data.copy(),
-                            "pd": pd, "np": np,
-                            "plt": plt, "sns": sns,
-                            "px": px, "go": go, "st": st,
-                            # Aliases for bare calls that LLMs sometimes generate without the `st.` prefix
+                            "pd": pd,
+                            "np": np,
+                            "plt": plt,
+                            "sns": sns,
+                            "matplotlib": matplotlib,
+                            "px": px,
+                            "go": go,
+                            "st": st,
                             "caption": st.caption,
                             "write": st.write,
                             "markdown": st.markdown,
